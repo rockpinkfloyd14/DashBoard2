@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lithium Stocks – Performance & Market Cap</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #e6edf3;
+    --muted: #9ba3af;
+    --border: #30363d;
+    --pos: #3fb950;
+    --neg: #f85149;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    padding: 14px;
+  }
+  h2 { margin: 0 0 10px; font-size: 1.15rem; }
+  .container { display: grid; gap: 12px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .name { font-weight: 700; font-size: 0.98rem; line-height: 1.2; }
+  .cap  { font-size: 0.86rem; color: var(--muted); white-space: nowrap; }
+  .metrics { border-top: 1px solid var(--border); margin-top: 6px; }
+  .row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 6px 0; border-bottom: 1px dashed var(--border);
+    font-size: 0.92rem;
+  }
+  .row:last-child { border-bottom: 0; }
+  .k { color: var(--muted); }
+  .v.pos { color: var(--pos); font-variant-numeric: tabular-nums; }
+  .v.neg { color: var(--neg); font-variant-numeric: tabular-nums; }
+  /* tap targets */
+  .card { transition: transform .05s ease; }
+  .card:active { transform: scale(.996); }
+  @media (min-width: 640px) {
+    .container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+</style>
+</head>
+<body>
+  <h2>📊 Lithium Stocks — Performance & Market Cap</h2>
+  <div class="container">
+
+    <!-- ALB -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Albemarle (ALB)</div>
+        <div class="cap">$11.52B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+3.59%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+14.49%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+46.52%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+13.25%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+1.54%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+3.32%</span></div>
+      </div>
+    </div>
+
+    <!-- PLS -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Pilbara Minerals (PLS)</div>
+        <div class="cap">$6.96B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+6.80%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+36.36%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+104.97%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+50.00%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+15.38%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+753.60%</span></div>
+      </div>
+    </div>
+
+    <!-- MIN -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Mineral Resources (MIN)</div>
+        <div class="cap">$6.19B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+13.08%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+21.36%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+68.52%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+39.68%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+16.18%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+96.27%</span></div>
+      </div>
+    </div>
+
+    <!-- Tianqi A -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Tianqi Lithium (A-share)</div>
+        <div class="cap">$12.04B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+10.53%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+15.14%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+37.93%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+61.74%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+32.26%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+14.77%</span></div>
+      </div>
+    </div>
+
+    <!-- Sichuan Yahua -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Sichuan Yahua Ind. A (002497)</div>
+        <div class="cap">$3.09B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+23.69%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+38.16%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+45.18%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+73.59%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+96.99%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+56.23%</span></div>
+      </div>
+    </div>
+
+    <!-- IGO -->
+    <div class="card">
+      <div class="header">
+        <div class="name">IGO Limited (IGO)</div>
+        <div class="cap">$2.74B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v neg">−1.47%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+5.71%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+21.22%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+12.58%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+1.32%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+22.43%</span></div>
+      </div>
+    </div>
+
+    <!-- LTR -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Liontown Resources (LTR)</div>
+        <div class="cap">$2.20B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+3.52%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+22.40%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+50.64%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+121.70%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+38.24%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+370.00%</span></div>
+      </div>
+    </div>
+
+    <!-- LAC -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Lithium Americas (LAC)</div>
+        <div class="cap">$1.39B</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v neg">−17.72%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v neg">−0.53%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+121.26%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+87.33%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+24.89%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v neg">−7.28%</span></div>
+      </div>
+    </div>
+
+    <!-- SLI -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Standard Lithium (SLI)</div>
+        <div class="cap">$910.22M</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v neg">−7.28%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+12.02%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+68.28%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+156.38%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+49.22%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+170.92%</span></div>
+      </div>
+    </div>
+
+    <!-- SGML TSX -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Sigma Lithium (SGML · TSX)</div>
+        <div class="cap">$703.3M</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+5.16%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v neg">−5.67%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+30.04%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v neg">−43.67%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v neg">−57.35%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+232.63%</span></div>
+      </div>
+    </div>
+
+    <!-- SGML NASDAQ -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Sigma Lithium (SGML · NASDAQ)</div>
+        <div class="cap">$696.61M</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+3.18%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v neg">−4.99%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+26.96%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v neg">−47.86%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v neg">−57.66%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+236.92%</span></div>
+      </div>
+    </div>
+
+    <!-- Lithium Argentina -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Lithium Argentina (LAR)</div>
+        <div class="cap">$689.78M</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v pos">+4.42%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+24.63%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+62.84%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+59.77%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+13.33%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v neg">−56.63%</span></div>
+      </div>
+    </div>
+
+    <!-- ELVR ADR -->
+    <div class="card">
+      <div class="header">
+        <div class="name">Elera Lithium ADR (ELVR)</div>
+        <div class="cap">$427.28M</div>
+      </div>
+      <div class="metrics">
+        <div class="row"><span class="k">1W</span><span class="v neg">−3.87%</span></div>
+        <div class="row"><span class="k">1M</span><span class="v pos">+7.26%</span></div>
+        <div class="row"><span class="k">3M</span><span class="v pos">+6.13%</span></div>
+        <div class="row"><span class="k">YTD</span><span class="v pos">+6.13%</span></div>
+        <div class="row"><span class="k">1Y</span><span class="v pos">+6.13%</span></div>
+        <div class="row"><span class="k">5Y</span><span class="v pos">+7.55%</span></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
