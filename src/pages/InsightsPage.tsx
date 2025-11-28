@@ -202,7 +202,7 @@ function InsightsPage() {
     });
   }, [search, selectedSegment]);
 
-  const handleScrollTo = (ref: RefObject<HTMLDivElement>) => {
+  const handleScrollTo = (ref: RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
