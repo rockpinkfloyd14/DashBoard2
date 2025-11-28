@@ -1,0 +1,84 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.insights-bg {
+  background: radial-gradient(circle at 20% 20%, rgba(255, 122, 24, 0.08), transparent 35%), #0c1014;
+  padding: 8px;
+}
+
+.insights-hero {
+  background: linear-gradient(135deg, #121821, #161e29);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.insights-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pill-btn {
+  border-radius: 999px;
+}
+
+.insights-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.insights-table th,
+.insights-table td {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.insights-table {
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .insights-bg {
+    padding: 16px;
+  }
+  .insights-hero {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .insights-hero h1 {
+    font-size: 1.6rem;
+  }
+  .insights-hero .lead {
+    font-size: 1rem;
+  }
+  .insights-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .insights-card p,
+  .insights-card h4 {
+    word-break: break-word;
+  }
+  .table-responsive {
+    -webkit-overflow-scrolling: touch;
+  }
+}
