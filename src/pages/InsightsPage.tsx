@@ -278,9 +278,9 @@ function InsightsPage() {
                 {incidents.map((item) => (
                   <div key={item.title} className="p-3 rounded border bg-light-subtle">
                     <div className="d-flex flex-wrap gap-2 mb-1">
-                      <Badge bg="dark">{item.location}</Badge>
-                      <Badge bg="secondary">{item.timing}</Badge>
-                      <Badge bg="warning" text="dark">{item.impact}</Badge>
+                      <Badge bg="dark" className="insights-badge">{item.location}</Badge>
+                      <Badge bg="secondary" className="insights-badge">{item.timing}</Badge>
+                      <Badge bg="warning" text="dark" className="insights-badge">{item.impact}</Badge>
                     </div>
                     <h6 className="mb-1">{item.title}</h6>
                     <p className="text-muted mb-0">{item.notes}</p>
@@ -334,7 +334,7 @@ function InsightsPage() {
                   <div key={m.label} className="p-3 rounded border bg-light-subtle">
                     <div className="d-flex justify-content-between align-items-center">
                       <h6 className="mb-1">{m.label}</h6>
-                      <Badge bg="success">{m.signal}</Badge>
+                      <Badge bg="success" className="insights-badge">{m.signal}</Badge>
                     </div>
                     <p className="text-muted small mb-0">Drivers: {m.drivers.join(', ')}</p>
                   </div>
@@ -411,14 +411,14 @@ function InsightsPage() {
                           <h5 className="mb-0">{c.name}</h5>
                           <small className="text-muted">{c.ticker} · {c.region}</small>
                         </div>
-                        <Badge bg="secondary">{c.segment}</Badge>
+                        <Badge bg="secondary" className="insights-badge">{c.segment}</Badge>
                       </div>
                       <p className="flex-grow-1">{c.notes}</p>
                       <div className="d-flex flex-wrap gap-2 mt-2">
-                        <Badge bg="warning" text="dark">P/E {multiples.pe.toFixed(1)}x</Badge>
-                        <Badge bg="dark">EV/EBITDA {multiples.evEbitda.toFixed(1)}x</Badge>
-                        <Badge bg="secondary">P/B {multiples.pb.toFixed(1)}x</Badge>
-                        <Badge bg="info" text="dark">Data center: {c.dataCenter}</Badge>
+                        <Badge bg="warning" text="dark" className="insights-badge">P/E {multiples.pe.toFixed(1)}x</Badge>
+                        <Badge bg="dark" className="insights-badge">EV/EBITDA {multiples.evEbitda.toFixed(1)}x</Badge>
+                        <Badge bg="secondary" className="insights-badge">P/B {multiples.pb.toFixed(1)}x</Badge>
+                        <Badge bg="info" text="dark" className="insights-badge">Data center: {c.dataCenter}</Badge>
                       </div>
                     </Card.Body>
                   </Card>
@@ -436,7 +436,7 @@ function InsightsPage() {
               <p className="text-uppercase small text-muted mb-1">Trading snapshot</p>
               <h4 className="mb-0">Multiples by year</h4>
             </div>
-            <Badge bg="warning" text="dark">Illustrative only</Badge>
+            <Badge bg="warning" text="dark" className="insights-badge">Illustrative only</Badge>
           </div>
           <div className="table-responsive">
             <Table striped bordered hover className="insights-table">
@@ -494,8 +494,8 @@ function InsightsPage() {
             {transactions.map((t) => (
               <div key={t.title} className="p-3 rounded border bg-light-subtle">
                 <div className="d-flex flex-wrap gap-2 align-items-center mb-1">
-                  <Badge bg="dark">{t.year}</Badge>
-                  <Badge bg="secondary">Specialty chemicals</Badge>
+                  <Badge bg="dark" className="insights-badge">{t.year}</Badge>
+                  <Badge bg="secondary" className="insights-badge">Specialty chemicals</Badge>
                 </div>
                 <h6 className="mb-1">{t.title}</h6>
                 <p className="text-muted mb-0">{t.detail}</p>
