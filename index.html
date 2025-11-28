@@ -1,280 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dow Inc. 2Q 2025 Earnings Presentation - Interactive Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f8f9fa; color: #333; }
-        .navbar-brand { font-weight: bold; color: #007bff; }
-        section { padding: 20px; margin-bottom: 20px; background-color: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h2 { color: #007bff; }
-        .insight-btn { background-color: #28a745; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
-        .insight-btn:hover { background-color: #218838; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #007bff; color: white; }
-        .accordion-button { background-color: #e9ecef; }
-        @media (max-width: 768px) { table { font-size: 14px; } }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flame Retardant Materials</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fas fa-chart-line"></i> Dow Inc. Earnings Dashboard</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#highlights"><i class="fas fa-star"></i> Highlights</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#segment-performance"><i class="fas fa-briefcase"></i> Segments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#outlook"><i class="fas fa-binoculars"></i> Outlook</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#actions"><i class="fas fa-tools"></i> Actions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#charts"><i class="fas fa-chart-bar"></i> Charts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#share-price"><i class="fas fa-chart-line"></i> Share Price</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#stock-table"><i class="fas fa-table"></i> Stock Table</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#q1-q2-comparison"><i class="fas fa-balance-scale"></i> Q1 vs Q2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reuters"><i class="fas fa-newspaper"></i> Reuters</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#media"><i class="fas fa-video"></i> Media & Links</a></li>
-                </ul>
-            </div>
-        </div>
+  <header>
+    <h1>Flame Retardant Materials & Fire Risk Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="#incidents">Fire Incidents</a></li>
+        <li><a href="#market">Market Scope</a></li>
+        <li><a href="#companies">Top Companies</a></li>
+        <li><a href="#valuations">Valuation Multiples</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="container">
-        <section id="highlights">
-            <h2><i class="fas fa-star"></i> 2Q 2025 Highlights</h2>
-            <p>Navigating tough markets with strategic moves! Net sales hit $10.1B amid weak macro conditions.</p>
-            <ul class="list-group">
-                <li class="list-group-item">Operating EBITDA: $703MM <button class="insight-btn" data-bs-toggle="modal" data-bs-target="#insightModal" onclick="setInsight('EBITDA Insight: Down due to tariffs and geopolitics, but cost savings ramping up!')">Insight</button></li>
-                <li class="list-group-item">CapEx: $662MM (below D&A)</li>
-                <li class="list-group-item">Dividend Reduction: 50% for flexibility</li>
-                <li class="list-group-item">Cash Inflows: $2.4B from partnership + $1.2B litigation</li>
-                <li class="list-group-item">Divestitures: $250MM at 10x multiples</li>
-                <li class="list-group-item">Cost Savings: Upped to $400MM in-year</li>
-                <li class="list-group-item">Actions: Shutting 3 Europe assets, advancing growth investments</li>
-            </ul>
-        </section>
+  <main>
+    <section id="incidents">
+      <h2>Major Fire Incidents</h2>
+      <p>Explore key recent fires in Hong Kong, Dubai, and their link to flammable construction materials. Interactive images and statistics below:</p>
+      <div id="incident-gallery" class="carousel"></div>
+    </section>
 
-        <section id="segment-performance">
-            <h2><i class="fas fa-briefcase"></i> Operating Segment Performance</h2>
-            <div class="accordion" id="segmentAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="packagingHeading">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#packagingCollapse">Packaging & Specialty Plastics</button>
-                    </h2>
-                    <div id="packagingCollapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Revenue: $5,025MM (down 9% YoY, 5% QoQ)</li>
-                                <li>Op. EBIT: $271MM (Margin: 5.4%)</li>
-                                <li>Key Drivers: Lower prices, higher maintenance</li>
-                                <li>End Markets: Packaging ~30%, Infrastructure ~40%</li>
-                            </ul>
-                            <button class="insight-btn" data-bs-toggle="modal" data-bs-target="#insightModal" onclick="setInsight('Actionable: Focus on Poly-7 ramp-up for margin boost in Q3!')">Insight</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="industrialHeading">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industrialCollapse">Industrial Intermediates & Infrastructure</button>
-                    </h2>
-                    <div id="industrialCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Revenue: $2,786MM (down 6% YoY, 2% QoQ)</li>
-                                <li>Op. EBIT: $57MM (Margin: 2.0%)</li>
-                                <li>Key Drivers: Lower volumes in deicing, maintenance</li>
-                                <li>End Markets: Infrastructure ~35%, Consumer ~25%</li>
-                            </ul>
-                            <button class="insight-btn" data-bs-toggle="modal" data-bs-target="#insightModal" onclick="setInsight('Actionable: Volume growth expected in Q3 with new capacity!')">Insight</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="performanceHeading">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#performanceCollapse">Performance Materials & Coatings</button>
-                    </h2>
-                    <div id="performanceCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Revenue: $2,105MM (down 8% YoY, flat QoQ)</li>
-                                <li>Op. EBIT: $85MM (Margin: 4.0%)</li>
-                                <li>Key Drivers: Seasonal demand drop, margin compression</li>
-                                <li>End Markets: Consumer ~40%, Mobility ~20%</li>
-                            </ul>
-                            <button class="insight-btn" data-bs-toggle="modal" data-bs-target="#insightModal" onclick="setInsight('Actionable: Watch for seasonal rebound in downstream coatings!')">Insight</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p>Overall trend: Revenue declining since 2020 due to macro pressures.</p>
-        </section>
+    <section id="market">
+      <h2>Market Scope of Flame Retardants</h2>
+      <p>The global flame retardant market is growing rapidly due to construction and data center demand.</p>
+      <canvas id="marketGrowthChart"></canvas>
+    </section>
 
-        <section id="outlook">
-            <h2><i class="fas fa-binoculars"></i> Outlook & Guidance</h2>
-            <p>Modest Q3 improvement ahead!</p>
-            <ul class="list-group">
-                <li class="list-group-item">Q3 Net Sales: ~$10.2B</li>
-                <li class="list-group-item">FY Tax Rate: (40)% to (60)%</li>
-                <li class="list-group-item">Packaging: +1% to +3% sales QoQ, higher margins ~$215MM tailwind</li>
-                <li class="list-group-item">Industrial: -1% to +1% sales, volume growth ~$30MM tailwind</li>
-                <li class="list-group-item">Performance: -4% to -2% sales, seasonal headwind ~$85MM</li>
-            </ul>
-            <button class="insight-btn" data-bs-toggle="modal" data-bs-target="#insightModal" onclick="setInsight('Insight: Focus on cost reductions for EBITDA uplift in H2!')">Guidance Insight</button>
-        </section>
+    <section id="companies">
+      <h2>Leading Companies</h2>
+      <ul id="companyList"></ul>
+    </section>
 
-        <section id="actions">
-            <h2><i class="fas fa-tools"></i> Actions for Flexibility & Profitability</h2>
-            <p>Driving execution for higher returns over the cycle.</p>
-            <ul>
-                <li>Commitment to shareholder returns</li>
-                <li>Asset shutdowns in Europe</li>
-                <li>Growth investments in high-value markets</li>
-            </ul>
-        </section>
+    <section id="valuations">
+      <h2>Financial Multiples Comparison (Last 3 Years)</h2>
+      <p>Click on a company to explore PE, EV/EBITDA, and PB metrics.</p>
+      <div id="valuationChart"></div>
+    </section>
+  </main>
 
-        <section id="charts">
-            <h2><i class="fas fa-chart-bar"></i> Financial Charts</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <canvas id="revenueChart"></canvas>
-                </div>
-                <div class="col-md-6">
-                    <canvas id="ebitdaChart"></canvas>
-                </div>
-            </div>
-            <script>
-                const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-                new Chart(revenueCtx, {
-                    type: 'line',
-                    data: {
-                        labels: ['2Q24', '1Q25', '2Q25', '3Q25 Est'],
-                        datasets: [{ label: 'Net Sales ($B)', data: [11.5, 10.4, 10.1, 10.2], borderColor: '#007bff', fill: false }]
-                    },
-                    options: { scales: { y: { beginAtZero: false } } }
-                });
-
-                const ebitdaCtx = document.getElementById('ebitdaChart').getContext('2d');
-                new Chart(ebitdaCtx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['2Q24', '1Q25', '2Q25'],
-                        datasets: [{ label: 'Op. EBITDA ($MM)', data: [1200, 944, 703], backgroundColor: '#28a745' }]
-                    },
-                    options: { scales: { y: { beginAtZero: true } } }
-                });
-            </script>
-            <p>Interactive Tip: Hover over charts for details!</p>
-        </section>
-
-        <section id="share-price">
-            <h2><i class="fas fa-chart-line"></i> TradingView Share Price Chart</h2>
-            <div id="tradingview-widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-                new TradingView.widget({
-                    "width": "100%",
-                    "height": 500,
-                    "symbol": "NYSE:DOW",
-                    "interval": "D",
-                    "timezone": "Etc/UTC",
-                    "theme": "light",
-                    "style": "1",
-                    "locale": "en",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "allow_symbol_change": true,
-                    "container_id": "tradingview-widget"
-                });
-            </script>
-            <p>Live share price chart for Dow Inc. (NYSE:DOW). Use the controls to zoom and analyze trends.</p>
-        </section>
-
-        <section id="stock-table">
-            <h2><i class="fas fa-table"></i> Stock Performance Table</h2>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr><th>Ticker</th><th>Company</th><th>1W %</th><th>1M %</th><th>3M %</th><th>YTD %</th><th>1Y %</th><th>5Y %</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>DOW</td><td>Dow Inc.</td><td>0.50</td><td>-8.00</td><td>-14.55</td><td>-37.84</td><td>-53.76</td><td>-41.45</td></tr>
-                        <tr><td>LYB</td><td>LyondellBasell Industries NV</td><td>2.52</td><td>4.69</td><td>5.47</td><td>-18.47</td><td>-37.02</td><td>-11.71</td></tr>
-                        <tr><td>CE</td><td>Celanese Corporation</td><td>0.32</td><td>2.90</td><td>33.54</td><td>-17.85</td><td>-58.86</td><td>-38.52</td></tr>
-                        <tr><td>Mx</td><td>METHANEX CORP</td><td>0.20</td><td>-4.03</td><td>7.23</td><td>-36.53</td><td>-32.06</td><td>72.84</td></tr>
-                        <tr><td>EMN</td><td>Eastman Chemical Company</td><td>-0.78</td><td>2.13</td><td>0.25</td><td>-15.14</td><td>-20.84</td><td>0.91</td></tr>
-                        <tr><td>TATACHEM</td><td>TATA CHEMICALS LTD</td><td>0.67</td><td>3.45</td><td>9.41</td><td>-9.17</td><td>-9.33</td><td>209.28</td></tr>
-                        <tr><td>PPG</td><td>PPG Industries, Inc.</td><td>-0.34</td><td>0.63</td><td>11.56</td><td>-3.42</td><td>-9.43</td><td>4.01</td></tr>
-                        <tr><td>SOLB</td><td>SOLVAY</td><td>5.20</td><td>0.88</td><td>-0.38</td><td>-6.14</td><td>-10.76</td><td>64.33</td></tr>
-                        <tr><td>EVK</td><td>EVONIK INDUSTRIES AG</td><td>1.70</td><td>-1.91</td><td>-7.00</td><td>7.17</td><td>-2.43</td><td>-26.35</td></tr>
-                        <tr><td>NTR</td><td>NUTRIEN LTD</td><td>2.86</td><td>-0.24</td><td>10.65</td><td>27.07</td><td>8.94</td><td>85.13</td></tr>
-                        <tr><td>2020</td><td>SABIC AGRI-NUTRIENTS CO</td><td>1.50</td><td>6.30</td><td>12.24</td><td>5.14</td><td>0.95</td><td>49.96</td></tr>
-                        <tr><td>600688</td><td>SINOPEC SHANGHAI PETROCHEMICAL CO</td><td>2.17</td><td>3.51</td><td>-1.34</td><td>-2.32</td><td>12.17</td><td>-18.96</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="q1-q2-comparison">
-            <h2><i class="fas fa-balance-scale"></i> Q1 vs Q2 Comparison</h2>
-            <div class="table-responsive">
-                <table>
-                    <thead><tr><th>Metric</th><th>Q1 2025</th><th>Q2 2025</th><th>Change %</th></tr></thead>
-                    <tbody>
-                        <tr><td>Net Sales ($B)</td><td>10.4</td><td>10.1</td><td>-2.88</td></tr>
-                        <tr><td>Op. EBITDA ($MM)</td><td>944</td><td>703</td><td>-25.53</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <button class="insight-btn" data-bs-toggle="modal" data-bs-target="#insightModal" onclick="setInsight('Comparison Insight: Q2 dip due to maintenance; expect Q3 recovery!')">Analyze</button>
-        </section>
-
-        <section id="reuters">
-            <h2><i class="fas fa-newspaper"></i> Reuters Commentary & Recent Headlines</h2>
-            <p>Commentary: Dow Inc. is grappling with a prolonged industry downturn, leading to a halved dividend, bigger-than-expected losses, and sales forecasts below estimates amid tariff uncertainty.</p>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="https://www.reuters.com/business/dow-slashes-dividend-reports-bigger-than-expected-loss-2025-07-24/" target="_blank">Dow slashes dividend, reports bigger-than-expected loss</a> (Published: 17 hours ago)</li>
-                <li class="list-group-item"><a href="https://www.reuters.com/business/dow-forecasts-sales-below-estimates-slashes-dividend-downturn-tariff-uncertainty-2025-07-24/" target="_blank">Dow forecasts sales below estimates, slashes dividend on downturn ...</a> (Published: 13 hours ago)</li>
-                <li class="list-group-item"><a href="https://www.reuters.com/business/dow-slashes-dividend-reports-bigger-than-expected-loss-2025-07-24/" target="_blank">Dow forecasts sales below estimates, slashes dividend as downturn ...</a> (Published: 16 hours ago)</li>
-                <li class="list-group-item"><a href="https://www.reuters.com/markets/companies/DOW.N/" target="_blank">Dow Inc. Stock Price & Latest News</a></li>
-            </ul>
-        </section>
-
-        <section id="media">
-            <h2><i class="fas fa-video"></i> Media & Links</h2>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/b_H_TMZlrNQ" title="Dow Earnings Video" frameborder="0" allowfullscreen></iframe>
-            <ul>
-                <li><a href="https://investors.dow.com/" target="_blank">Investor Relations</a></li>
-                <li><a href="https://www.dow.com/" target="_blank">Official Website</a></li>
-            </ul>
-        </section>
-    </div>
-
-    <!-- Modal for Insights -->
-    <div class="modal fade" id="insightModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Actionable Insight</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body" id="insightText"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        function setInsight(text) {
-            document.getElementById('insightText').innerText = text;
-        }
-    </script>
+  <footer>
+    <p>© 2025 Fire Safety Intelligence | Built for GitHub Pages</p>
+  </footer>
 </body>
 </html>

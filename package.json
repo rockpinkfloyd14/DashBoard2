@@ -1,0 +1,11 @@
+{
+  "name": "flame-retardant-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "echo Run on GitHub Pages",
+    "build": "echo Deploy manually via GitHub Pages"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  }
+}
